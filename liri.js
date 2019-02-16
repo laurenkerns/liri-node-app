@@ -78,13 +78,15 @@ function Userinputs (LiriCommand, LiriInput){
     }
 
 //spotify-this
-    function spotifyThis(){
+    function spotifyThis(songName){
+        console.log('spotify this called!!!!!!!!!!!')
         if(LiriInput === ""){
             LiriInput = "The Sign Ace of Base";  /////if the under doesn't do anything
         }
+        console.log('song name?????????? ', songName)
         spotify.search(
             {type: "track", 
-            query: LiriInput
+            query: LiriInput || songName
             },
             function(err, data){
                 if (err) {
@@ -124,15 +126,15 @@ function Userinputs (LiriCommand, LiriInput){
 //do-what-it-says
     function doWhatItSays(){
         //store contents of txt file in data
-        fs.readFile("random.txt", "utf8", function(error, data){
-            if(error) {
-                return console.log(error);
-            }
-            // console.log(data);
+       const data = fs.readFileSync("random.txt", "utf8")
+            console.log(data);
             var dataArr = data.split(", ");
-            console.log(dataArr);
-            spotifyThis(dataArr[0], dataArr[1]);
+            const song = dataArr[1]
+            console.log('data arr!!!!!!!!' , dataArr);
+            console.log('data arr 1 ', dataArr[1])
+            console.log('song? ', song)
+        spotifyThis(song);
     
-        });
+    
     }
 
