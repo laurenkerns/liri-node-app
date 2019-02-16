@@ -78,15 +78,15 @@ function Userinputs (LiriCommand, LiriInput){
     }
 
 //spotify-this
-    function spotifyThis(songName){
-        console.log('spotify this called!!!!!!!!!!!')
-        if(LiriInput === ""){
+    function spotifyThis(){
+        // console.log('spotify this called!!!!!!!!!!!')
+        if(LiriInput === undefined){
             LiriInput = "The Sign Ace of Base";  /////if the under doesn't do anything
         }
-        console.log('song name?????????? ', songName)
+        // console.log(songName)
         spotify.search(
             {type: "track", 
-            query: LiriInput || songName
+            query: LiriInput 
             },
             function(err, data){
                 if (err) {
@@ -104,10 +104,12 @@ function Userinputs (LiriCommand, LiriInput){
 
 //movie-this
     function movieThis(){
-        if(LiriInput === undefined){
-            LiriInput = "Mr. Nobody.";   /////If user does not input anything
+        if(LiriInput === " " || undefined){
+            LiriInput = "Mr.Nobody,";   /////If user does not input anything
+            // console.log("If you haven't watched Mr. Nobody, then you should: http://www.imdb.com/title/tt0485947/");
+            // console.log("It's on Netflix");
         }
-        console.log(OmbdURL);
+        // console.log(OmbdURL);
         axios.get(OmbdURL).then(        
             function(response) {
                 console.log("Title: " + response.data.Title);
@@ -129,11 +131,11 @@ function Userinputs (LiriCommand, LiriInput){
        const data = fs.readFileSync("random.txt", "utf8")
             console.log(data);
             var dataArr = data.split(", ");
-            const song = dataArr[1]
-            console.log('data arr!!!!!!!!' , dataArr);
-            console.log('data arr 1 ', dataArr[1])
-            console.log('song? ', song)
-        spotifyThis(song);
+            // const song = dataArr[1]
+            // console.log('data arr!!!!!!!!' , dataArr);
+            // console.log('data arr 1 ', dataArr[1])
+            console.log(data[0], data[1])
+            spotifyThis(data[0], data[1]);
     
     
     }
