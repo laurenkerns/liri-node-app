@@ -24,16 +24,16 @@ Liri will be able to perform 4 different commands + the parameter you give her. 
   * If this band does not have an upcoming show Liri will not be able to pull any data
   * If you do not provide a parameter after “concert-this” in the command line, Liri will return “no data on this Artist, please try again!
 
-1. Spotify-this”
+2. Spotify-this”
   * Liri will pull the following information on the song title: Artists, Songs name, Preview link of the song, Album that the song is from.
   1* If no Parameter is given to Liri after “spotify-this” she will default to finding information on “The Sign” by Ace of Base
   
-1. “Movie this”
+3. “Movie this”
   * Liri will pull the following information about the movie you provide her: Title of movie, Year the movie was released, IMBD rating, Rotten Tomatoes rating, Country where the movie was produced, Language the movie is spoken in, plot and the actors in the movie
   * If no parameter is given after the “movie-this” command then Liri will default to “Mr. Nobody”
   
-1. “Do-what-it-says”
+4. “Do-what-it-says”
   * For this command, Liri will be reading the random.text file provided. Within this file there is a command, as well as the parameter. For this assignment the parameters are “spotify-this-song”, I want it that way. So Liri will be pulling from the spotify API and will provide the user will information on “I want it that way”.
 
 
-
+## Scrrenshots of commands 
