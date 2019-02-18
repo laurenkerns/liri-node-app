@@ -5,24 +5,24 @@ Week-10 Homework
 LiriBot is a just like the iPhone's SIRI- but instead of using speech interpretation, LIRI is a language Interpretation and Recognition Interface. You can use your computer’s command like that will take in the outlines parameters and give you back real time data!
 
 Liri uses three different APIs to generate the data from your request. These API’s are:
-*Bands in Town
-*Spotify
-*OMBD
+* Bands in Town
+* Spotify
+* OMBD
 
 
-**We also will be using these packages. WIthout these packages the application will not run properly. In order to run this on your local computer you must install them.*
-*Axios
-*Moment 
-*Node-Spotify-API
-*DotEnv
+** We also will be using these packages. WIthout these packages the application will not run properly. In order to run this on your local computer you must install them.*
+* Axios
+* Moment 
+* Node-Spotify-API
+* DotEnv
 
 _Liri Commands_
 Liri will be able to perform 4 different commands + the parameter you give her. Here are the four commands she is able to run
 
 1. “Concert-this” + band who has an upcoming show
-  *Liri will then pull the following information on the upcoming concert: Venue, Location and Date
-  *If this band does not have an upcoming show Liri will not be able to pull any data
-  *If you do not provide a parameter after “concert-this” in the command line, Liri will return “no data on this Artist, please try again!
+  * Liri will then pull the following information on the upcoming concert: Venue, Location and Date
+  * If this band does not have an upcoming show Liri will not be able to pull any data
+  * If you do not provide a parameter after “concert-this” in the command line, Liri will return “no data on this Artist, please try again!
 
 1. Spotify-this”
   1. Liri will pull the following information on the song title: Artists, Songs name, Preview link of the song, Album that the song is from.
