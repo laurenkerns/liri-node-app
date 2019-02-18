@@ -104,8 +104,8 @@ function Userinputs (LiriCommand, LiriInput){
 
 //movie-this
     function movieThis(){
-        if(LiriInput === " " || undefined){
-            LiriInput = "Mr.Nobody,";   /////If user does not input anything
+        if(LiriInput === undefined){
+            LiriInput = "Mr Nobody";   /////If user does not input anything
             // console.log("If you haven't watched Mr. Nobody, then you should: http://www.imdb.com/title/tt0485947/");
             // console.log("It's on Netflix");
         }
