@@ -82,6 +82,7 @@ function Userinputs (LiriCommand, LiriInput){
         // console.log('spotify this called!!!!!!!!!!!')
         if(LiriInput === undefined){
             LiriInput = "The Sign Ace of Base";  /////if the under doesn't do anything
+            
         }
         // console.log(songName)
         spotify.search(
@@ -105,7 +106,9 @@ function Userinputs (LiriCommand, LiriInput){
 //movie-this
     function movieThis(){
         if(LiriInput === undefined){
-            LiriInput = "Mr Nobody";   /////If user does not input anything
+            LiriInput = "Mr. Nobody";   /////If user does not input anything
+            var OmbdURL = "http://www.omdbapi.com/?t=" + LiriInput + "&y=&plot=short&apikey=trilogy";
+            console.log(LiriInput);
             // console.log("If you haven't watched Mr. Nobody, then you should: http://www.imdb.com/title/tt0485947/");
             // console.log("It's on Netflix");
         }
